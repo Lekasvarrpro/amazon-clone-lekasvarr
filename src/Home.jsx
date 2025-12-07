@@ -11,6 +11,9 @@ import img6 from "./assets/Home/img6.jpg";
 import img7 from "./assets/Home/img7.jpg";
 import img8 from "./assets/Home/img8.jpg";
 import img9 from "./assets/Home/img9.jpg";
+import footer from "./assets/Home/footer.png";
+import {NavLink} from "react-router-dom";
+import { useEffect } from "react";
 
 const subscriptionImages = [
   img6, img2, img3,
@@ -20,6 +23,11 @@ const subscriptionImages = [
 
 
 const Home = () => {
+
+  useEffect(() => {
+    document.title = "Welcome to Prime Video";
+  }, []);
+
   return (
     <div className="w-full h-auto">
       {" "}
@@ -135,7 +143,18 @@ const Home = () => {
   </div>
 </div>
 
-
+{/*FOOTER SECTION*/}
+<div className="w-full bg-[#222222] py-10 px-14 text-white flex flex-col items-center justify-center gap-2">
+   <img src={footer} height={32} width={104} className=""/>
+   <div className="flex gap-5 text-[#90DFE9] ">
+      <NavLink className="transition hover:[text-shadow:0_0_1px_currentColor,0_0_1px_currentColor]">Terms and Privacy Notice</NavLink>
+      <NavLink className="transition hover:[text-shadow:0_0_1px_currentColor,0_0_1px_currentColor]">Send us feedback</NavLink>
+      <NavLink className="transition hover:[text-shadow:0_0_1px_currentColor,0_0_1px_currentColor]">Help</NavLink>
+   </div>
+   <div>
+    <p className="text-md text-[#819798] mt-1">© 1996-2025, Amazon.com, Inc. or its affiliates</p>
+   </div>
+</div>
       <Outlet />
     </div>
   );

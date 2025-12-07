@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+/* For slick active dot */
+.slick-dots li.slick-active div {
+  background: white !important;
+  width: 20px !important;   /* Oval shape */
+  height: 8px !important;
+  border-radius: 10px !important;
+  transition: all 0.3s ease;
+}
+
+/* Inactive dot */
+.slick-dots li div {
+  background: #6b7280 !important; /* gray */
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  transition: all 0.3s ease;
+}
