@@ -9,32 +9,32 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
 
-// ====== LOCAL IMAGES (correct imports) ======
-import mi2Banner from "/src/assets/Movies/mi2-banner.jpeg";
-import miTitle from "/src/assets/Movies/mi-title.png";
+// ====== LOCAL IMAGES ======
+import mi2Banner from "../../../assets/Movies/mi2-banner.jpeg";
+import miTitle from "../../../assets/Movies/mi-title.png";
 
-import kantaraBanner from "/src/assets/Movies/kantara-banner.jpeg";
-import kantaraTitle from "/src/assets/Movies/kantara-title.png";
+import kantaraBanner from "../../../assets/Movies/kantara-banner.jpeg";
+import kantaraTitle from "../../../assets/Movies/kantara-title.png";
 
-import jataraBanner from "/src/assets/Movies/jatara-banner.jpeg";
-import jataraTitle from "/src/assets/Movies/jatara-title.png";
+import jataraBanner from "../../../assets/Movies/jatara-banner.jpeg";
+import jataraTitle from "../../../assets/Movies/jatara-title.png";
 
-import smurfBanner from "/src/assets/Movies/smurf-banner.jpeg";
-import smurfTitle from "/src/assets/Movies/smurf-title.png";
+import smurfBanner from "../../../assets/Movies/smurf-banner.jpeg";
+import smurfTitle from "../../../assets/Movies/smurf-title.png";
 
-import thanalBanner from "/src/assets/Movies/thanal-banner.jpeg";
-import thanalTitle from "/src/assets/Movies/thanal-title.png";
+import thanalBanner from "../../../assets/Movies/thanal-banner.jpeg";
+import thanalTitle from "../../../assets/Movies/thanal-title.png";
 
-import ohBanner from "/src/assets/Movies/oh-banner.jpeg";
-import ohTitle from "/src/assets/Movies/oh-title.png";
+import ohBanner from "../../../assets/Movies/oh-banner.jpeg";
+import ohTitle from "../../../assets/Movies/oh-title.png";
 
-import dieselBanner from "/src/assets/Movies/diesel-banner.jpeg";
-import dieselTitle from "/src/assets/Movies/diesel-title.png";
+import dieselBanner from "../../../assets/Movies/diesel-banner.jpeg";
+import dieselTitle from "../../../assets/Movies/diesel-title.png";
 
-import baagiBanner from "/src/assets/Movies/baagi-banner.jpeg";
-import baagiTitle from "/src/assets/Movies/baagi-title.png";
+import baagiBanner from "../../../assets/Movies/baagi-banner.jpeg";
+import baagiTitle from "../../../assets/Movies/baagi-title.png";
 
-import stampImg from "/src/assets/Movies/common-stamp.png";
+import stampImg from "../../../assets/Movies/common-stamp.png";
 // ============================================
 
 const Movies = () => {
@@ -136,15 +136,11 @@ const Movies = () => {
     autoplay: true,
     autoplaySpeed: 5000,
     arrows: false,
-
     appendDots: (dots) => (
       <div>
-        <ul className="flex justify-center relative bottom-15 gap-2">
-          {dots}
-        </ul>
+        <ul className="flex justify-center relative bottom-15 gap-2">{dots}</ul>
       </div>
     ),
-
     customPaging: () => (
       <div className="w-3 h-3 rounded-full bg-gray-500 hover:bg-white transition-all"></div>
     ),
@@ -182,9 +178,7 @@ const Movies = () => {
                     alt="Movie Title"
                   />
 
-                  <p className="text-md text-green-400 font-semibold">
-                    {slide.rank}
-                  </p>
+                  <p className="text-md text-green-400 font-semibold">{slide.rank}</p>
 
                   <p className="mt-1 font-semibold text-xl whitespace-pre-line">
                     {slide.description}
